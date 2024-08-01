@@ -1,0 +1,27 @@
+
+<section class="usersList mt-5">
+    <div class="container">
+        <h1>Users</h1>
+        <input type="text" pInputText [(ngModel)]="value" class="me-2 w-50"/>
+        <p-button label="Search" severity="secondary" />
+
+        <div class="row mt-5">
+            <div class="col-6" *ngFor="let item of usersArray;">
+                <div class="box">
+                    <!-- @for (item of usersArray; track $index) { -->
+                        <img [src]="item.profile" alt="Profile Image">
+                        
+                        <div class="info">
+                            <p>{{item.username }}</p>
+                            <i [ngStyle]="{'color': item.isAdmin ? 'green' : 'red'}" class="fa-solid fa-star ms-2"></i>
+                        </div>
+
+                        <p>{{item.email }}</p>
+                        <p>{{item.phone }}</p>
+                    <!-- } -->
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
