@@ -6,8 +6,7 @@
         <p-button label="Search" severity="secondary" />
 
         <div class="row mt-5">
-            <div class="col-6" *ngFor="let item of usersArray;">
-                <div class="box">
+            <div class="col-6" *ngFor="let item of usersArray; let i = index;" [ngClass]="{'negative-margin': (i + 1) % 2 === 0}">                <div class="box">
                     <!-- @for (item of usersArray; track $index) { -->
                         <img [src]="item.profile" alt="Profile Image">
                         
@@ -25,3 +24,5 @@
         </div>
     </div>
 </section>
+
+<hr>

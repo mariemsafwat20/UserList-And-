@@ -1,4 +1,4 @@
-import { NgFor, NgStyle } from '@angular/common';
+import { NgClass, NgFor, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
@@ -7,7 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [FormsModule, ButtonModule, InputTextModule, NgFor, NgStyle],
+  imports: [FormsModule, ButtonModule, InputTextModule, NgFor, NgStyle, NgClass],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })

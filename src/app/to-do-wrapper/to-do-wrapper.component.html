@@ -1,0 +1,8 @@
+
+<div class="container mt-5">
+    <h1 class="text-center mt-5">To-Do App!</h1>
+    <div class="todo-wrapper">
+        <app-to-do-form (taskAdded)="addTask($event)"></app-to-do-form>
+        <app-to-do-list [tasks]="tasks" (taskDeleted)="deleteTask($event)"></app-to-do-list>
+    </div>
+</div>
